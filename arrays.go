@@ -10,12 +10,17 @@ import "fmt"
 func main() {
 	// declaring arrays
 	var arrayNumeros [5]int
+	arrayNumeros[3] = 2666
 
+	primes := [6]int {2, 3, 5, 7, 11, 13}
+
+	// array de strings
 	var arrayStrings [3]string
 	arrayStrings[0] = "Dave"
 	arrayStrings[1] = "Pamela"
 	arrayStrings[2] = "George"
 
+	// array de booleans
 	var arrayBooleans [2]bool
 	arrayBooleans[0] = true
 	arrayBooleans[1] = false
@@ -23,6 +28,7 @@ func main() {
 	fmt.Println(arrayStrings)
 	fmt.Println(arrayNumeros)
 	fmt.Println(arrayBooleans)
+	fmt.Println(primes)
 
 	// declaring arrays using array literals
 	arrayNumerosLiteral := [4]int {10, 30, 32, 643}
@@ -34,6 +40,31 @@ func main() {
 	fmt.Println(arrayStringsLiteral[2])
 	fmt.Println(arrayStringsLiteral[3])
 	fmt.Println(arrayStringsLiteral[4])
+
+	// initialize specific index of an array
+	x := [5]int {1:34, 3:60} 
+	fmt.Println(x)
+
+	// looping por un array
+	for i:= 0; i < len(x); i++ {
+		fmt.Println("looping por el array: ",x[i])
+	}
+
+	j := 0
+	for range x {
+		fmt.Println(x[j])
+		j++
+	}
+
+	counter := 0
+	for range arrayStrings {
+		fmt.Println(arrayStrings[counter])
+		counter ++
+	}
+
+	for i:= 0; i < len(arrayStrings); i++ {
+		fmt.Println(arrayStrings[i])
+	}
 }
 
 // Arrays are valuable data structures because the memory is allocated sequentially.
